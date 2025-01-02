@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { TbLetterZ } from "react-icons/tb";
 import { HiHome } from 'react-icons/hi';
-// import {
-//   SignedIn,
-//   SignedOut,
-//   SignInButton,
-//   SignOutButton,
-// } from '@clerk/nextjs';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignOutButton,
+} from '@clerk/nextjs';
 // import MiniProfile from './MiniProfile';
 export default function Sidebar() {
   return (
@@ -22,14 +22,17 @@ export default function Sidebar() {
           <HiHome className='w-7 h-7' />
           <span className='font-bold hidden xl:inline'>Home</span>
         </Link>
-        <button className='bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden xl:inline font-semibold'>
-          {/* <SignedIn>
-            <SignOutButton />
+        
+          <div className='bg-blue-400 text-white rounded-full  hover:brightness-95 transition-all duration-200 w-48 h-9 shadow-md hidden  font-semibold md:flex items-center justify-center'>
+
+          <SignedIn>
+            <SignOutButton  />
           </SignedIn>
           <SignedOut>
             <SignInButton />
-          </SignedOut> */}
-        </button>
+          </SignedOut>
+          </div>
+        
       </div>
       {/* <SignedIn>
         <MiniProfile />
