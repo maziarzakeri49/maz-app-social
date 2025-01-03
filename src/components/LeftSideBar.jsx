@@ -7,7 +7,8 @@ import {
   SignInButton,
   SignOutButton,
 } from '@clerk/nextjs';
-// import MiniProfile from './MiniProfile';
+import Miniprofile from './Miniprofile';
+
 export default function Sidebar() {
   return (
     <div className='flex flex-col p-3 justify-between h-screen items-center'>
@@ -34,9 +35,9 @@ export default function Sidebar() {
           </div>
         
       </div>
-      {/* <SignedIn>
-        <MiniProfile />
-      </SignedIn> */}
+      <SignedIn>
+        <Miniprofile/>
+      </SignedIn>
     </div>
   );
 }
